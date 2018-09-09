@@ -56,8 +56,8 @@ class TensorFlowSaver:
     def save(self, sess, step):
         self.saver.save(sess=sess, save_path=self.path, global_step=step)
 
-class RewardLogger:
-    def __init__(self, file_writer, summary_name="reward"):
+class ManualSummary:
+    def __init__(self, file_writer, summary_name):
         self.file_writer = file_writer
         self.summary_name = summary_name
         self.global_step = 0

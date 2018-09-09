@@ -30,10 +30,12 @@ class BreakOutPreprocessor(ObservationWrapper):
     """
     def __init__(self, env):
         super(BreakOutPreprocessor, self).__init__(env)
+        self.observation_space = Box(-1, 1, [88, 80, 1])
 
     def observation(self, obs):
         obs = (obs / 200 - 0.5) * 2
         obs = obs[20:-14:2, ::2]
+        obs = np.mean(obs, axis=2, keepdims=True)
         return obs
 
 
