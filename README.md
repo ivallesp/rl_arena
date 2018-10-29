@@ -1,4 +1,4 @@
-# rl_arena
+# Reinforcement Learning Arena
 Reinforcement Learning Arena, a python environment to make it easy to experiment with RL Algorithms. This repository is work in progress. I'll be adding functions and utilities as needed
 
 ## Getting started
